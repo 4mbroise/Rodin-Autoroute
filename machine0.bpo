@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="112">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poIdentifier name="voituresRegularisees" org.eventb.core.type="ℙ(voituresRegularisees)"/>
+        <org.eventb.core.poIdentifier name="endroit" org.eventb.core.type="ℙ(endroit)"/>
+        <org.eventb.core.poIdentifier name="voitures" org.eventb.core.type="ℙ(voitures)"/>
+        <org.eventb.core.poIdentifier name="portiques" org.eventb.core.type="ℙ(portiques)"/>
+        <org.eventb.core.poIdentifier name="types" org.eventb.core.type="ℙ(types)"/>
+        <org.eventb.core.poIdentifier name="surAutoroute" org.eventb.core.type="endroit"/>
+        <org.eventb.core.poIdentifier name="typePortique" org.eventb.core.type="ℙ(portiques×types)"/>
+        <org.eventb.core.poIdentifier name="lamboMiura" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="entree" org.eventb.core.type="types"/>
+        <org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="types"/>
+        <org.eventb.core.poIdentifier name="portique" org.eventb.core.type="endroit"/>
+        <org.eventb.core.poIdentifier name="nissStagea" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="toyoTrueno" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="c0" org.eventb.core.type="ℙ(voitures×endroit)"/>
+        <org.eventb.core.poIdentifier name="p1" org.eventb.core.type="portiques"/>
+        <org.eventb.core.poIdentifier name="p2" org.eventb.core.type="portiques"/>
+        <org.eventb.core.poIdentifier name="pasSurAutoroute" org.eventb.core.type="endroit"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseet" org.eventb.core.predicate="lamboMiura∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="voituresRegulariseeu" org.eventb.core.predicate="toyoTrueno∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseev" org.eventb.core.predicate="nissStagea∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm2"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseew" org.eventb.core.predicate="lamboMiura≠toyoTrueno" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm11"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseex" org.eventb.core.predicate="nissStagea≠toyoTrueno" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseey" org.eventb.core.predicate="nissStagea≠lamboMiura" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm17"/>
+        <org.eventb.core.poPredicate name="voituresRegulariseez" org.eventb.core.predicate="lamboMiura≠nissStagea" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm16"/>
+        <org.eventb.core.poPredicate name="voituresRegularisee{" org.eventb.core.predicate="toyoTrueno≠lamboMiura" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm14"/>
+        <org.eventb.core.poPredicate name="voituresRegularisee|" org.eventb.core.predicate="toyoTrueno≠nissStagea" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poPredicate name="voituresRegularisee}" org.eventb.core.predicate="partition(endroit,{pasSurAutoroute},{portique},{surAutoroute})" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1&gt;"/>
+        <org.eventb.core.poPredicate name="voituresRegularisee~" org.eventb.core.predicate="c0∈voitures → endroit" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1@"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef'" org.eventb.core.predicate="∀x⦂voitures·x∈voitures⇒c0(x)=pasSurAutoroute" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm18"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef(" org.eventb.core.predicate="p1∈portiques" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1E"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef)" org.eventb.core.predicate="p2∈portiques" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm19"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef*" org.eventb.core.predicate="partition(types,{entree},{sortie})" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1I"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef+" org.eventb.core.predicate="entree∈types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm20"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef," org.eventb.core.predicate="sortie∈types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm21"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef-" org.eventb.core.predicate="sortie≠entree" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm22"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef." org.eventb.core.predicate="typePortique∈portiques → types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm23"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef/" org.eventb.core.predicate="typePortique(p1)=entree" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm24"/>
+        <org.eventb.core.poPredicate name="voituresRegularisef0" org.eventb.core.predicate="typePortique(p2)=sortie" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm25"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℙ(voitures×endroit)"/>
+        <org.eventb.core.poIdentifier name="quelPortique" org.eventb.core.type="ℙ(voitures×portiques)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c0∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="typePortique∈portiques → types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv4"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv4"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(voitures×portiques))∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTquelPortiquf" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poIdentifier name="quelPortique'" org.eventb.core.type="ℙ(voitures×portiques)"/>
+        <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℙ(voitures×endroit)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPquelPortiquf" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquf" org.eventb.core.poStamp="83"/>
+    <org.eventb.core.poSequent name="entrerPortiqueEntree/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqug"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqug"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueEntree/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqug("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqug("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueEntree/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="89">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiqug"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c{car ↦ portique}∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerPortiqueEntree\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueEntree/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="89">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiqug"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="quelPortique{car ↦ p}∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerPortiqueEntree\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTquelPortiqug" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poIdentifier name="car" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="quelPortique'" org.eventb.core.type="ℙ(voitures×portiques)"/>
+        <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℙ(voitures×endroit)"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="portiques"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiqug(" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqug" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c(car)=pasSurAutoroute" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈portiques ∖ ran(quelPortique)" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd2"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPquelPortiqug" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqug(" org.eventb.core.poStamp="89">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="typePortique(p)=entree" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#inv2|org.eventb.core.guard#grd3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="entrerAutoroute/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquh"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerAutoroute/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerAutoroute/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(quelPortique)∧quelPortique∈voitures ⇸ portiques∧quelPortique(car)∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd2"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerAutoroute/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c{car ↦ surAutoroute}∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerAutoroute\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerAutoroute/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="quelPortique ∖ {car ↦ quelPortique(car)}∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerAutoroute\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerAutoroute/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="112">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(quelPortique)∧quelPortique∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.action#act1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.action#act1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquh"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTquelPortiquh" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="100">
+        <org.eventb.core.poIdentifier name="car" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="quelPortique'" org.eventb.core.type="ℙ(voitures×portiques)"/>
+        <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℙ(voitures×endroit)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiquh'" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquh" org.eventb.core.poStamp="108">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c(car)=portique⇒car∈dom(quelPortique)" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd1"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiquh(" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh'" org.eventb.core.poStamp="108">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c(car)=portique" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPquelPortiquh" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquh(" org.eventb.core.poStamp="108">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="typePortique(quelPortique(car))=entree" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt1|org.eventb.core.guard#grd2"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="entrerPortiqueSortie/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqui"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqui"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueSortie/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqui("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqui("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueSortie/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiqui"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c{car ↦ portique}∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerPortiqueSortie\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="entrerPortiqueSortie/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiqui"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="quelPortique{car ↦ p}∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#entrerPortiqueSortie\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTquelPortiqui" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poIdentifier name="car" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="quelPortique'" org.eventb.core.type="ℙ(voitures×portiques)"/>
+        <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℙ(voitures×endroit)"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="portiques"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiqui(" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiqui" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c(car)=surAutoroute" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈portiques ∖ ran(quelPortique)" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd2"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPquelPortiqui" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiqui(" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="typePortique(p)=sortie" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt2|org.eventb.core.guard#grd3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="sortirAutoroute/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquj"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortirAutoroute/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(c)∧c∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd4"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd4"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortirAutoroute/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(quelPortique)∧quelPortique∈voitures ⇸ portiques∧quelPortique(car)∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd2"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortirAutoroute/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c{car ↦ pasSurAutoroute}∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#sortirAutoroute\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortirAutoroute/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="quelPortique ∖ {car ↦ quelPortique(car)}∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poSequent#sortirAutoroute\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortirAutoroute/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="111">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="car∈dom(quelPortique)∧quelPortique∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.action#act1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.action#act1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTALLHYPquelPortiquj"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTquelPortiquj" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="86">
+        <org.eventb.core.poIdentifier name="car" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="quelPortique'" org.eventb.core.type="ℙ(voitures×portiques)"/>
+        <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℙ(voitures×endroit)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiquj'" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTIDENTquelPortiquj" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c(car)=portique" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd1"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPquelPortiquj(" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj'" org.eventb.core.poStamp="110">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c(car)=portique⇒car∈dom(quelPortique)" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPquelPortiquj" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#EVTHYPquelPortiquj(" org.eventb.core.poStamp="110">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="typePortique(quelPortique(car))=sortie" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.event#evt3|org.eventb.core.guard#grd2"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Autoroute/machine0.bpo|org.eventb.core.poFile#machine0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="83">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈voitures → endroit" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv1"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="typePortique∈portiques → types" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv4"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="quelPortique∈voitures ⇸ portiques" org.eventb.core.source="/Autoroute/machine0.bum|org.eventb.core.machineFile#machine0|org.eventb.core.invariant#inv5"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.constant name="+" org.eventb.core.identifier="lamboMiura"/>
+    <org.eventb.core.constant name="," org.eventb.core.identifier="toyoTrueno"/>
+    <org.eventb.core.constant name="-" org.eventb.core.identifier="nissStagea"/>
+    <org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="lamboMiura ∈ voitures"/>
+    <org.eventb.core.axiom name="axm1" org.eventb.core.label="axm2" org.eventb.core.predicate="toyoTrueno ∈ voitures"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm3" org.eventb.core.predicate="nissStagea ∈ voitures"/>
+    <org.eventb.core.carrierSet name="0" org.eventb.core.identifier="voituresRegularisees"/>
+    <org.eventb.core.axiom name="axm11" org.eventb.core.label="axm9" org.eventb.core.predicate="lamboMiura ≠ toyoTrueno"/>
+    <org.eventb.core.axiom name="axm13" org.eventb.core.label="axm13" org.eventb.core.predicate="nissStagea ≠ toyoTrueno"/>
+    <org.eventb.core.axiom name="axm17" org.eventb.core.label="axm14" org.eventb.core.predicate="nissStagea ≠ lamboMiura"/>
+    <org.eventb.core.axiom name="axm16" org.eventb.core.label="axm10" org.eventb.core.predicate="lamboMiura ≠ nissStagea"/>
+    <org.eventb.core.axiom name="axm14" org.eventb.core.label="axm11" org.eventb.core.predicate="toyoTrueno ≠ lamboMiura"/>
+    <org.eventb.core.axiom name="axm12" org.eventb.core.label="axm12" org.eventb.core.predicate="toyoTrueno ≠ nissStagea"/>
+    <org.eventb.core.carrierSet name="axm18" org.eventb.core.identifier="endroit"/>
+    <org.eventb.core.constant name="axm19" org.eventb.core.identifier="pasSurAutoroute"/>
+    <org.eventb.core.constant name="cst1" org.eventb.core.identifier="portique"/>
+    <org.eventb.core.constant name="cst2" org.eventb.core.identifier="surAutoroute"/>
+    <org.eventb.core.axiom name="axm1&gt;" org.eventb.core.label="axm15" org.eventb.core.predicate="partition(endroit, {pasSurAutoroute}, {portique}, {surAutoroute})"/>
+    <org.eventb.core.carrierSet name="axm1?" org.eventb.core.identifier="voitures"/>
+    <org.eventb.core.axiom name="axm1@" org.eventb.core.label="axm16" org.eventb.core.predicate="c0 ∈ voitures → endroit"/>
+    <org.eventb.core.axiom name="axm18" org.eventb.core.label="axm17" org.eventb.core.predicate="∀x·x∈voitures⇒c0(x)=pasSurAutoroute"/>
+    <org.eventb.core.constant name="axm1A" org.eventb.core.identifier="c0"/>
+    <org.eventb.core.carrierSet name="axm1B" org.eventb.core.identifier="portiques"/>
+    <org.eventb.core.constant name="axm1D" org.eventb.core.identifier="p1"/>
+    <org.eventb.core.constant name="cst3" org.eventb.core.identifier="p2"/>
+    <org.eventb.core.axiom name="axm1E" org.eventb.core.label="axm19" org.eventb.core.predicate="p1∈portiques"/>
+    <org.eventb.core.axiom name="axm19" org.eventb.core.label="axm21" org.eventb.core.predicate="p2∈portiques"/>
+    <org.eventb.core.carrierSet name="axm1F" org.eventb.core.identifier="types"/>
+    <org.eventb.core.constant name="axm1G" org.eventb.core.identifier="entree"/>
+    <org.eventb.core.constant name="axm1H" org.eventb.core.identifier="sortie"/>
+    <org.eventb.core.constant name="cst4" org.eventb.core.identifier="typePortique"/>
+    <org.eventb.core.axiom name="axm1I" org.eventb.core.label="axm20" org.eventb.core.predicate="partition(types, {entree}, {sortie})"/>
+    <org.eventb.core.axiom name="axm20" org.eventb.core.label="axm22" org.eventb.core.predicate="entree ∈ types"/>
+    <org.eventb.core.axiom name="axm21" org.eventb.core.label="axm23" org.eventb.core.predicate="sortie ∈ types"/>
+    <org.eventb.core.axiom name="axm22" org.eventb.core.label="axm24" org.eventb.core.predicate="sortie ≠ entree"/>
+    <org.eventb.core.axiom name="axm23" org.eventb.core.label="axm25" org.eventb.core.predicate="typePortique ∈ portiques→ types"/>
+    <org.eventb.core.axiom name="axm24" org.eventb.core.label="axm26" org.eventb.core.predicate="typePortique(p1)=entree"/>
+    <org.eventb.core.axiom name="axm25" org.eventb.core.label="axm27" org.eventb.core.predicate="typePortique(p2)=sortie"/>
+</org.eventb.core.contextFile>
