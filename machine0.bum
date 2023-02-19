@@ -41,7 +41,6 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔pasSurAutoroute" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique ≔ quelPortique ∖ {car↦quelPortique(car)}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="inv4" org.eventb.core.label="inv3" org.eventb.core.predicate="typePortique ∈ portiques→ types"/>
-    <org.eventb.core.invariant name="inv5" org.eventb.core.label="inv4" org.eventb.core.predicate="quelPortique ∈ voitures⇸portiques"/>
+    <org.eventb.core.invariant name="inv5" org.eventb.core.label="inv4" org.eventb.core.predicate="quelPortique ∈ voitures⤔portiques"/>
     <org.eventb.core.variable name="inv5" org.eventb.core.identifier="quelPortique"/>
 </org.eventb.core.machineFile>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="aTicket≔c1" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="act6" org.eventb.core.assignment="estLibre≔c2" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="act7" org.eventb.core.assignment="tckt≔pasTicket" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.refinesMachine name="(" org.eventb.core.target="machine0"/>
+    <org.eventb.core.seesContext name=")" org.eventb.core.target="context1"/>
+    <org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntree"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="aBadge(car)=TRUE"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="telepeage(p)=TRUE"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntree"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd5" org.eventb.core.predicate="telepeage(p)=FALSE"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="c"/>
+    <org.eventb.core.variable name="var1" org.eventb.core.identifier="quelPortique"/>
+    <org.eventb.core.variable name="var2" org.eventb.core.identifier="aTicket"/>
+    <org.eventb.core.event name="var2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteETicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutoroute"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="telepeage(quelPortique(car))=TRUE"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="aTicket(car)≔eTicket" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutoroute"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="telepeage(quelPortique(car))=FALSE"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="aTicket(car)≔ticket" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortie"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="aBadge(car)=TRUE"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd5" org.eventb.core.predicate="telepeage(p)=TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortie"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd5" org.eventb.core.predicate="telepeage(p)=FALSE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutoroute"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="aTicket(car)≔pasTicket" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="aTicket(car)≠pasTicket"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="var6" org.eventb.core.label="inv1" org.eventb.core.predicate="aTicket∈voitures → ticketStatus"/>
+    <org.eventb.core.event name="var8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteSansTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutoroute"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="aTicket(car)=pasTicket"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="perdreTicket">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="aTicket(car)≠pasTicket"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="car"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="aTicket(car)≔pasTicket" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="var9" org.eventb.core.identifier="estLibre"/>
+    <org.eventb.core.invariant name="var:" org.eventb.core.label="inv2" org.eventb.core.predicate="estLibre∈voitures → BOOL"/>
+    <org.eventb.core.invariant name="var;" org.eventb.core.label="inv3" org.eventb.core.predicate="tckt ∈ ticketStatus"/>
+    <org.eventb.core.variable name="var=" org.eventb.core.identifier="tckt"/>
+</org.eventb.core.machineFile>

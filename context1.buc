@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="context0"/>
+    <org.eventb.core.constant name="(" org.eventb.core.identifier="aBadge"/>
+    <org.eventb.core.axiom name="axm20" org.eventb.core.label="axm33" org.eventb.core.predicate="p3∈portiques"/>
+    <org.eventb.core.axiom name="axm21" org.eventb.core.label="axm34" org.eventb.core.predicate="p4∈portiques"/>
+    <org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="aBadge∈voitures → BOOL"/>
+    <org.eventb.core.constant name="cst1" org.eventb.core.identifier="telepeage"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm4" org.eventb.core.predicate="aBadge(nissStagea)=TRUE"/>
+    <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm5" org.eventb.core.predicate="aBadge(lamboMiura)=FALSE"/>
+    <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm6" org.eventb.core.predicate="aBadge(toyoTrueno)=FALSE"/>
+    <org.eventb.core.axiom name="axm9" org.eventb.core.label="axm11" org.eventb.core.predicate="telepeage∈portiques → BOOL"/>
+    <org.eventb.core.axiom name="axm10" org.eventb.core.label="axm12" org.eventb.core.predicate="telepeage(p1)=TRUE"/>
+    <org.eventb.core.axiom name="axm11" org.eventb.core.label="axm13" org.eventb.core.predicate="telepeage(p2)=TRUE"/>
+    <org.eventb.core.axiom name="axm12" org.eventb.core.label="axm14" org.eventb.core.predicate="telepeage(p3)=FALSE"/>
+    <org.eventb.core.axiom name="axm13" org.eventb.core.label="axm15" org.eventb.core.predicate="telepeage(p4)=FALSE"/>
+    <org.eventb.core.constant name="axm14" org.eventb.core.identifier="c1"/>
+    <org.eventb.core.constant name="cst4" org.eventb.core.identifier="p4"/>
+    <org.eventb.core.constant name="cst5" org.eventb.core.identifier="p3"/>
+    <org.eventb.core.axiom name="axm15" org.eventb.core.label="axm16" org.eventb.core.predicate="c1 ∈ voitures → ticketStatus"/>
+    <org.eventb.core.axiom name="axm16" org.eventb.core.label="axm17" org.eventb.core.predicate="∀x·x∈voitures⇒c1(x)=pasTicket"/>
+    <org.eventb.core.axiom name="axm17" org.eventb.core.label="axm30" org.eventb.core.predicate="typePortique(p3)=entree" org.eventb.core.theorem="true"/>
+    <org.eventb.core.axiom name="axm18" org.eventb.core.label="axm31" org.eventb.core.predicate="typePortique(p4)=sortie"/>
+    <org.eventb.core.axiom name="axm19" org.eventb.core.label="axm32" org.eventb.core.predicate="p1≠p2 ∧ p1≠p3 ∧ p1≠p4 ∧ p2≠p3 ∧ p2≠p4 ∧ p3≠p4"/>
+    <org.eventb.core.axiom name="axm22" org.eventb.core.label="axm35" org.eventb.core.predicate="∀x·x∈voitures⇒c2(x)=TRUE"/>
+    <org.eventb.core.axiom name="axm23" org.eventb.core.label="axm36" org.eventb.core.predicate="c2 ∈ voitures → BOOL"/>
+    <org.eventb.core.carrierSet name="axm22" org.eventb.core.identifier="etatDetention"/>
+    <org.eventb.core.constant name="axm23" org.eventb.core.identifier="c2"/>
+    <org.eventb.core.carrierSet name="axm24" org.eventb.core.identifier="ticketStatus"/>
+    <org.eventb.core.constant name="axm25" org.eventb.core.identifier="pasTicket"/>
+    <org.eventb.core.constant name="axm26" org.eventb.core.identifier="eTicket"/>
+    <org.eventb.core.constant name="axm27" org.eventb.core.identifier="ticket"/>
+    <org.eventb.core.axiom name="axm28" org.eventb.core.label="axm37" org.eventb.core.predicate="partition(ticketStatus, {pasTicket}, {eTicket}, {ticket})"/>
+</org.eventb.core.contextFile>
