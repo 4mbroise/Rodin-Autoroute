@@ -43,4 +43,5 @@
     </org.eventb.core.event>
     <org.eventb.core.invariant name="inv5" org.eventb.core.label="inv4" org.eventb.core.predicate="quelPortique ∈ voitures⤔portiques"/>
     <org.eventb.core.variable name="inv5" org.eventb.core.identifier="quelPortique"/>
+    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv5" org.eventb.core.predicate="∀v1,v2·v1∈voitures ∧ v2∈voitures ∧ v1∈dom(quelPortique) ∧ v2∈dom(quelPortique) ∧ v1≠v2 ⇒ quelPortique(v1) ≠ quelPortique(v2)" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
