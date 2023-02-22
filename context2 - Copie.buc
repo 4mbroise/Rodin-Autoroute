@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="context1"/>
+    <org.eventb.core.constant name="cst1" org.eventb.core.identifier="c2"/>
+    <org.eventb.core.constant name="(" org.eventb.core.identifier="tarifs"/>
+    <org.eventb.core.axiom name="axm11" org.eventb.core.label="axm36" org.eventb.core.predicate="c2 ∈ voitures → BOOL"/>
+    <org.eventb.core.axiom name="axm12" org.eventb.core.label="axm35" org.eventb.core.predicate="∀x·x∈voitures⇒c2(x)=TRUE"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm3" org.eventb.core.predicate="a={x∣x∈portiques∧typePortique(x)=entree}"/>
+    <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm4" org.eventb.core.predicate="b={y∣y∈portiques ∧ typePortique(y)=sortie}"/>
+    <org.eventb.core.constant name="axm2" org.eventb.core.identifier="a"/>
+    <org.eventb.core.constant name="axm3" org.eventb.core.identifier="b"/>
+    <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm6" org.eventb.core.predicate="tarifs∈(a×b)→ℕ"/>
+    <org.eventb.core.axiom name="axm6" org.eventb.core.label="axm7" org.eventb.core.predicate="tarifs(p1↦p2)=100"/>
+    <org.eventb.core.axiom name="axm7" org.eventb.core.label="axm8" org.eventb.core.predicate="tarifs(p1↦p4)=500"/>
+    <org.eventb.core.axiom name="axm8" org.eventb.core.label="axm9" org.eventb.core.predicate="tarifs(p3↦p4)=250"/>
+    <org.eventb.core.axiom name="axm9" org.eventb.core.label="axm10" org.eventb.core.predicate="pleinPot ∈ℕ"/>
+    <org.eventb.core.axiom name="axm10" org.eventb.core.label="axm11" org.eventb.core.predicate="pleinPot=500"/>
+    <org.eventb.core.constant name="axm9" org.eventb.core.identifier="pleinPot"/>
+</org.eventb.core.contextFile>

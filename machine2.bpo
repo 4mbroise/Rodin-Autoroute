@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="72">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="72">
+        <org.eventb.core.poIdentifier name="pleinPot" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="pleinPou" org.eventb.core.predicate="pleinPot∈ℕ" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm9"/>
+        <org.eventb.core.poPredicate name="pleinPov" org.eventb.core.predicate="pleinPot=500" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm10"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Autoroute/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="72"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPcontext3" org.eventb.core.parentSet="/Autoroute/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Autoroute/machine2.bpo|org.eventb.core.poFile#machine2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="72"/>
+</org.eventb.core.poFile>

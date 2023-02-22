@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm10" org.eventb.core.predicate="pleinPot∈ℕ" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm9" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm11" org.eventb.core.predicate="pleinPot=500" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm10" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="pleinPot" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.constant#axm9" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

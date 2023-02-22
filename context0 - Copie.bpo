@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="endroit" org.eventb.core.type="ℙ(endroit)"/>
+        <org.eventb.core.poIdentifier name="voitures" org.eventb.core.type="ℙ(voitures)"/>
+        <org.eventb.core.poIdentifier name="portiques" org.eventb.core.type="ℙ(portiques)"/>
+        <org.eventb.core.poIdentifier name="types" org.eventb.core.type="ℙ(types)"/>
+        <org.eventb.core.poIdentifier name="surAutoroute" org.eventb.core.type="endroit"/>
+        <org.eventb.core.poIdentifier name="typePortique" org.eventb.core.type="ℙ(portiques×types)"/>
+        <org.eventb.core.poIdentifier name="lamboMiura" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="entree" org.eventb.core.type="types"/>
+        <org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="types"/>
+        <org.eventb.core.poIdentifier name="portique" org.eventb.core.type="endroit"/>
+        <org.eventb.core.poIdentifier name="nissStagea" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="toyoTrueno" org.eventb.core.type="voitures"/>
+        <org.eventb.core.poIdentifier name="c0" org.eventb.core.type="ℙ(voitures×endroit)"/>
+        <org.eventb.core.poIdentifier name="p1" org.eventb.core.type="portiques"/>
+        <org.eventb.core.poIdentifier name="p2" org.eventb.core.type="portiques"/>
+        <org.eventb.core.poIdentifier name="pasSurAutoroute" org.eventb.core.type="endroit"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm17/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP1"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂voitures·x∈voitures⇒x∈dom(c0)∧c0∈voitures ⇸ endroit" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm18"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm18"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm26/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP:"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p1∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm24"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm24"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP:"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm27/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP;"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p2∈dom(typePortique)∧typePortique∈portiques ⇸ types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm25"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm25"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP;"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lamboMiura∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="toyoTrueno∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="nissStagea∈voitures" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm2"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="lamboMiura≠toyoTrueno" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm11"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="nissStagea≠toyoTrueno" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="nissStagea≠lamboMiura" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm17"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="lamboMiura≠nissStagea" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm16"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="toyoTrueno≠lamboMiura" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm14"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="toyoTrueno≠nissStagea" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="partition(endroit,{pasSurAutoroute},{portique},{surAutoroute})" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1&gt;"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="c0∈voitures → endroit" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1@"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP:" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀x⦂voitures·x∈voitures⇒c0(x)=pasSurAutoroute" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm18"/>
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="p1∈portiques" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1E"/>
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="p2∈portiques" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm19"/>
+        <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="p1≠p2" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm30"/>
+        <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="partition(types,{entree},{sortie})" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm1I"/>
+        <org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="entree∈types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm20"/>
+        <org.eventb.core.poPredicate name="PRD17" org.eventb.core.predicate="sortie∈types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm21"/>
+        <org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="sortie≠entree" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm22"/>
+        <org.eventb.core.poPredicate name="PRD19" org.eventb.core.predicate="typePortique∈portiques → types" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm23"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP;" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP:" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD20" org.eventb.core.predicate="typePortique(p1)=entree" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm24"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Autoroute/context0.bpo|org.eventb.core.poFile#context0|org.eventb.core.poPredicateSet#HYP;" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="typePortique(p2)=sortie" org.eventb.core.source="/Autoroute/context0.buc|org.eventb.core.contextFile#context0|org.eventb.core.axiom#axm25"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

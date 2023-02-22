@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="20">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="20">
+        <org.eventb.core.poIdentifier name="pleinPot" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Autoroute/context2.bpo|org.eventb.core.poFile#context2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="20">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pleinPot∈ℕ" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm9"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pleinPot=500" org.eventb.core.source="/Autoroute/context2.buc|org.eventb.core.contextFile#context2|org.eventb.core.axiom#axm10"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

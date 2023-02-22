@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="act7" org.eventb.core.assignment="estLibre≔c2" org.eventb.core.comment=" Tout le monde est libre au début" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="budget≔{toyoTrueno↦250, lamboMiura↦100, nissStagea↦978}" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="context2"/>
+    <org.eventb.core.refinesMachine name=")" org.eventb.core.target="machine1"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="budget"/>
+    <org.eventb.core.variable name="var1" org.eventb.core.identifier="c"/>
+    <org.eventb.core.variable name="var2" org.eventb.core.identifier="quelPortique"/>
+    <org.eventb.core.variable name="var3" org.eventb.core.identifier="aTicket"/>
+    <org.eventb.core.variable name="var5" org.eventb.core.identifier="saveEntree"/>
+    <org.eventb.core.variable name="var4" org.eventb.core.identifier="estLibre"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="budget∈voitures⇸ℕ"/>
+    <org.eventb.core.invariant name="inv1" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x·x∈voitures∧x∈dom(budget)⇒budget(x)≥0"/>
+    <org.eventb.core.invariant name="inv2" org.eventb.core.label="inv3" org.eventb.core.predicate="estLibre∈voitures → BOOL"/>
+    <org.eventb.core.invariant name="inv3" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x·x∈voitures ∧ estLibre(x) = FALSE ⇒ (aTicket(x) = pasTicket)"/>
+    <org.eventb.core.event name="var6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeBadge"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeTicket"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteETicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteETicket"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd5" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteTicket"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortirAutorouteSansTicketEtSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteSansTicket"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=portique"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd3" org.eventb.core.predicate="c(car)=portique ⇒ car∈dom(quelPortique)"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="typePortique(quelPortique(car))=sortie"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔pasSurAutoroute" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique ≔ quelPortique ∖ {car↦quelPortique(car)}" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="internal1" org.eventb.core.label="grd4" org.eventb.core.predicate="aTicket(car)=pasTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)≥pleinPot"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteSansTicketEtPasSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteSansTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)&lt;pleinPot"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="perdreTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="perdreTicket"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicketEtSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)≥tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔budget(car)−tarifs(saveEntree(car)↦quelPortique(car))" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicketEtPasSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)&lt;tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="act3" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortieBadge"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="var?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieTicket">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortieTicket"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
