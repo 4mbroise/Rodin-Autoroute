@@ -3,6 +3,10 @@
     <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="act7" org.eventb.core.assignment="estLibre≔c2" org.eventb.core.comment=" Tout le monde est libre au début" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="'" org.eventb.core.assignment="budget≔{toyoTrueno↦250, lamboMiura↦100, nissStagea↦978}" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="act10" org.eventb.core.assignment="repereBudget≔∅" org.eventb.core.label="act55"/>
+        <org.eventb.core.action name="act8" org.eventb.core.assignment="perdu≔{toyoTrueno↦FALSE, lamboMiura↦FALSE, nissStagea↦FALSE}" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="act9" org.eventb.core.assignment="listVehiculesBizarres≔∅" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="act:" org.eventb.core.assignment="sizeListVehiculesBizarres≔0" org.eventb.core.label="act9"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="context2"/>
     <org.eventb.core.refinesMachine name=")" org.eventb.core.target="machine1"/>
@@ -15,66 +19,145 @@
     <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="budget∈voitures⇸ℕ"/>
     <org.eventb.core.invariant name="inv1" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x·x∈voitures∧x∈dom(budget)⇒budget(x)≥0"/>
     <org.eventb.core.invariant name="inv2" org.eventb.core.label="inv3" org.eventb.core.predicate="estLibre∈voitures → BOOL"/>
-    <org.eventb.core.invariant name="inv3" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x·x∈voitures ∧ estLibre(x) = FALSE ⇒ (aTicket(x) = pasTicket)"/>
-    <org.eventb.core.event name="var6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeBadge">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeBadge"/>
+    <org.eventb.core.invariant name="inv4" org.eventb.core.label="inv5" org.eventb.core.predicate="perdu∈voitures ⇸ BOOL"/>
+    <org.eventb.core.invariant name="inv5" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x·x∈voitures ∧ estLibre(x) = FALSE ⇒ (aTicket(x) = pasTicket)"/>
+    <org.eventb.core.event name="var6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeBadgeAvecBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeBadgeAvecBadge"/>
         <org.eventb.core.guard name="grd5" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+        <org.eventb.core.action name="grd6" org.eventb.core.assignment="repereBudget(car)≔budget(car)" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd7" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd8" org.eventb.core.predicate="budget(car)∈ℕ"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeBadgeSansBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeBadgeSansBadge"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+        <org.eventb.core.action name="act3" org.eventb.core.assignment="listVehiculesBizarres≔listVehiculesBizarres∪{sizeListVehiculesBizarres↦car}" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="act4" org.eventb.core.assignment="sizeListVehiculesBizarres≔sizeListVehiculesBizarres+1" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="act5" org.eventb.core.assignment="repereBudget(car)≔budget(car)" org.eventb.core.label="act6"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd7" org.eventb.core.predicate="listVehiculesBizarres∪{sizeListVehiculesBizarres ↦ car}∈0 ‥ sizeListVehiculesBizarres+1 − 1 → voitures"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd9" org.eventb.core.predicate="budget(car)∈ℕ"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueEntreeTicket">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueEntreeTicket"/>
         <org.eventb.core.guard name="grd7" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car)=TRUE"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd7" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.label="grd8" org.eventb.core.predicate="budget(car)∈ℕ"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="repereBudget(car)≔budget(car)" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="var8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteETicket">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteETicket"/>
-        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd5" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+    <org.eventb.core.event name="var8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteETicketAvecBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteETicketAvecBadge"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteETicketSansBadge">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteETicketSansBadge"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd6" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd7" org.eventb.core.predicate="car∈ran(listVehiculesBizarres)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerAutorouteTicket">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerAutorouteTicket"/>
         <org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="estLibre(car) = TRUE"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd6" org.eventb.core.predicate="car∉dom(saveEntree)"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="var5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortirAutorouteSansTicketEtSolvable">
+    <org.eventb.core.event name="var5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteSansTicketEtSolvable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteSansTicket"/>
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=portique"/>
-        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd3" org.eventb.core.predicate="c(car)=portique ⇒ car∈dom(quelPortique)"/>
-        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="typePortique(quelPortique(car))=sortie"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔pasSurAutoroute" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique ≔ quelPortique ∖ {car↦quelPortique(car)}" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="internal1" org.eventb.core.label="grd4" org.eventb.core.predicate="aTicket(car)=pasTicket"/>
         <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)≥pleinPot"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd95" org.eventb.core.predicate="budget(car)≥pleinPot"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd9" org.eventb.core.predicate="car∉ran(listVehiculesBizarres)"/>
+        <org.eventb.core.action name="grd7" org.eventb.core.assignment="budget(car)≔budget(car)−pleinPot" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd96" org.eventb.core.predicate="car∈dom(repereBudget)∧repereBudget(car)&gt;budget(car) − pleinPot"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteSansTicketEtPasSolvable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteSansTicket"/>
         <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)&lt;pleinPot"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="budget(car)&lt;pleinPot"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="act2" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd9" org.eventb.core.predicate="car∉ran(listVehiculesBizarres)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="perdreTicket">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="perdreTicket"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="var;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicketEtSolvable">
+    <org.eventb.core.event name="var;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecETicketEtSolvable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
         <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
         <org.eventb.core.guard name="grd7" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
         <org.eventb.core.guard name="grd9" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
-        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)≥tarifs(saveEntree(car)↦quelPortique(car))"/>
-        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔budget(car)−tarifs(saveEntree(car)↦quelPortique(car))" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd56" org.eventb.core.predicate="budget(car)≥tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔budget(car)−tarifs(saveEntree(car)↦quelPortique(car))" org.eventb.core.label="act44"/>
+        <org.eventb.core.guard name="grd:" org.eventb.core.label="grd90" org.eventb.core.predicate="aTicket(car)=eTicket"/>
+        <org.eventb.core.guard name="grd;" org.eventb.core.label="grd91" org.eventb.core.predicate="car∉ran(listVehiculesBizarres)"/>
+        <org.eventb.core.guard name="grd=" org.eventb.core.label="grd92" org.eventb.core.predicate="car∈dom(repereBudget)∧repereBudget(car)&gt;budget(car) − tarifs(saveEntree(car) ↦ quelPortique(car))"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecETicketEtPasSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd56" org.eventb.core.predicate="budget(car)&lt;tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act44"/>
+        <org.eventb.core.guard name="grd:" org.eventb.core.label="grd90" org.eventb.core.predicate="aTicket(car)=eTicket"/>
+        <org.eventb.core.guard name="grd;" org.eventb.core.label="grd91" org.eventb.core.predicate="car∉ran(listVehiculesBizarres)"/>
+        <org.eventb.core.action name="grd=" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act45"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicketEtSolvable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
+        <org.eventb.core.guard name="grd7" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd65" org.eventb.core.predicate="budget(car)≥tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.guard name="grd10" org.eventb.core.label="grd90" org.eventb.core.predicate="aTicket(car)=ticket"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔budget(car)−tarifs(saveEntree(car)↦quelPortique(car))" org.eventb.core.label="act64"/>
+        <org.eventb.core.guard name="grd11" org.eventb.core.label="grd91" org.eventb.core.predicate="car∉ran(listVehiculesBizarres)"/>
+        <org.eventb.core.guard name="grd12" org.eventb.core.label="grd92" org.eventb.core.predicate="car∈dom(repereBudget)∧repereBudget(car)&gt;budget(car) − tarifs(saveEntree(car) ↦ quelPortique(car))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirAutorouteAvecTicketEtPasSolvable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortirAutorouteAvecTicket"/>
         <org.eventb.core.guard name="grd5" org.eventb.core.label="grd8" org.eventb.core.predicate="car∈dom(budget)"/>
         <org.eventb.core.guard name="grd6" org.eventb.core.label="grd89" org.eventb.core.predicate="car∈dom(saveEntree)"/>
         <org.eventb.core.guard name="grd7" org.eventb.core.label="grd9" org.eventb.core.predicate="saveEntree(car) ↦ quelPortique(car)∈dom(tarifs)"/>
-        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd5" org.eventb.core.predicate="budget(car)&lt;tarifs(saveEntree(car)↦quelPortique(car))"/>
-        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="grd8" org.eventb.core.label="grd95" org.eventb.core.predicate="budget(car)&lt;tarifs(saveEntree(car)↦quelPortique(car))"/>
+        <org.eventb.core.action name="act2" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act44"/>
         <org.eventb.core.action name="act3" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="grd9" org.eventb.core.label="grd90" org.eventb.core.predicate="aTicket(car)=ticket"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieBadge">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortieBadge"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="car∈dom(perdu)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd7" org.eventb.core.predicate="perdu(car)=FALSE"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="var?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerPortiqueSortieTicket">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrerPortiqueSortieTicket"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd6" org.eventb.core.predicate="car∈dom(perdu)"/>
+        <org.eventb.core.guard name="grd6" org.eventb.core.label="grd7" org.eventb.core.predicate="perdu(car)=FALSE"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="var@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="se perdre">
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="car"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="perdu(car)≔TRUE" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="listVehiculesBizarres≔listVehiculesBizarres∪{sizeListVehiculesBizarres↦car}" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="sizeListVehiculesBizarres≔sizeListVehiculesBizarres+1" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd4" org.eventb.core.predicate="car∈dom(perdu)"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=surAutoroute"/>
+        <org.eventb.core.guard name="act2" org.eventb.core.label="grd2" org.eventb.core.predicate="perdu(car)=FALSE"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="listVehiculesBizarres∪{sizeListVehiculesBizarres ↦ car}∈0 ‥ sizeListVehiculesBizarres → voitures"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="varA" org.eventb.core.identifier="perdu"/>
+    <org.eventb.core.variable name="var6" org.eventb.core.identifier="listVehiculesBizarres"/>
+    <org.eventb.core.variable name="var7" org.eventb.core.identifier="sizeListVehiculesBizarres"/>
+    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv7" org.eventb.core.predicate="sizeListVehiculesBizarres∈ℕ"/>
+    <org.eventb.core.invariant name="varB" org.eventb.core.label="inv8" org.eventb.core.predicate="listVehiculesBizarres∈(0‥sizeListVehiculesBizarres−1)→voitures"/>
+    <org.eventb.core.invariant name="inv7" org.eventb.core.label="inv9" org.eventb.core.predicate="∀x·x∈voitures ∧ x∈ran(listVehiculesBizarres)∧c(x)=pasSurAutoroute ⇒ estLibre(x)=FALSE"/>
+    <org.eventb.core.event name="varC" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="InterceptionVoitureFrauduleuse">
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd85" org.eventb.core.predicate="car∈ran(listVehiculesBizarres)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd6" org.eventb.core.predicate="car∈dom(perdu)"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd7" org.eventb.core.predicate="perdu(car)=FALSE"/>
+        <org.eventb.core.action name="act1" org.eventb.core.assignment="budget(car)≔0" org.eventb.core.label="act53"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="estLibre(car)≔FALSE" org.eventb.core.label="act4"/>
+        <org.eventb.core.refinesEvent name="grd4" org.eventb.core.target="sortirAutorouteSansTicket"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="varD" org.eventb.core.label="inv10" org.eventb.core.predicate="∀x·x∈voitures∧x∈dom(saveEntree)∧aBadge(x)=FALSE∧c(x)=surAutoroute∧telepeage(saveEntree(x))=TRUE⇒x∈ran(listVehiculesBizarres)"/>
+    <org.eventb.core.invariant name="inv8" org.eventb.core.label="inv11" org.eventb.core.predicate="∀x·x∈voitures∧x∈dom(perdu)∧perdu(x)=TRUE⇒x∈ran(listVehiculesBizarres)"/>
+    <org.eventb.core.invariant name="inv9" org.eventb.core.label="inv12" org.eventb.core.predicate="repereBudget∈voitures⇸ℕ"/>
+    <org.eventb.core.invariant name="inv10" org.eventb.core.label="inv13" org.eventb.core.predicate="∀x·x∈voitures∧c(x)=pasSurAutoroute∧x∈dom(repereBudget)∧x∈dom(budget)∧repereBudget(x)&gt;0⇒(repereBudget(x)&gt;budget(x))"/>
+    <org.eventb.core.variable name="varE" org.eventb.core.identifier="repereBudget"/>
 </org.eventb.core.machineFile>
