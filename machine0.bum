@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="act2" org.eventb.core.assignment="c ≔ c0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="act6" org.eventb.core.assignment="quelEndroit ≔ {lamboMiura↦pasSurAutoroute, toyoTrueno↦pasSurAutoroute, nissStagea↦pasSurAutoroute}" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="act5" org.eventb.core.assignment="quelPortique ≔ ∅" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="(" org.eventb.core.identifier="c"/>
-    <org.eventb.core.invariant name="inv1" org.eventb.core.label="inv2" org.eventb.core.predicate="c ∈ voitures → endroit"/>
     <org.eventb.core.seesContext name="*" org.eventb.core.target="context0"/>
     <org.eventb.core.event name="inv2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrerPortiqueEntree">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
         <org.eventb.core.parameter name="element1" org.eventb.core.identifier="p"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=pasSurAutoroute"/>
+        <org.eventb.core.guard name="element3" org.eventb.core.label="grd4" org.eventb.core.predicate="car∈dom(quelEndroit)"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="quelEndroit(car)=pasSurAutoroute"/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ portiques∖ran(quelPortique) "/>
         <org.eventb.core.guard name="grd3" org.eventb.core.label="grd3" org.eventb.core.predicate="typePortique(p)=entree "/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔portique" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="quelEndroit(car)≔portique" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique(car)≔p" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrerAutoroute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="c(car)=portique ⇒ car∈dom(quelPortique)"/>
-        <org.eventb.core.guard name="grd3" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=portique"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="car∈dom(quelEndroit)"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="quelEndroit(car)=portique ⇒ car∈dom(quelPortique)"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.label="grd1" org.eventb.core.predicate="quelEndroit(car)=portique"/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="typePortique(quelPortique(car))=entree"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔surAutoroute" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="quelEndroit(car)≔surAutoroute" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique ≔ quelPortique ∖ {car↦quelPortique(car)}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrerPortiqueSortie">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
         <org.eventb.core.parameter name="element1" org.eventb.core.identifier="p"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=surAutoroute"/>
+        <org.eventb.core.guard name="element2" org.eventb.core.label="grd4" org.eventb.core.predicate="car∈dom(quelEndroit)"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="quelEndroit(car)=surAutoroute"/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ portiques∖ran(quelPortique) "/>
         <org.eventb.core.guard name="grd3" org.eventb.core.label="grd3" org.eventb.core.predicate="typePortique(p)=sortie "/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔portique" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="quelEndroit(car)≔portique" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique(car)≔p" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortirAutoroute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="car"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="c(car)=portique"/>
-        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd3" org.eventb.core.predicate="c(car)=portique ⇒ car∈dom(quelPortique)"/>
+        <org.eventb.core.guard name="grd5" org.eventb.core.label="grd4" org.eventb.core.predicate="car∈dom(quelEndroit)"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="quelEndroit(car)=portique"/>
+        <org.eventb.core.guard name="grd4" org.eventb.core.label="grd3" org.eventb.core.predicate="quelEndroit(car)=portique ⇒ car∈dom(quelPortique)"/>
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="typePortique(quelPortique(car))=sortie"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="c(car)≔pasSurAutoroute" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="quelEndroit(car)≔pasSurAutoroute" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="act1" org.eventb.core.assignment="quelPortique ≔ quelPortique ∖ {car↦quelPortique(car)}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="inv8" org.eventb.core.label="inv6" org.eventb.core.predicate="quelEndroit ∈ voitures ⇸ endroit "/>
     <org.eventb.core.invariant name="inv5" org.eventb.core.label="inv4" org.eventb.core.predicate="quelPortique ∈ voitures⤔portiques"/>
     <org.eventb.core.variable name="inv5" org.eventb.core.identifier="quelPortique"/>
     <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv5" org.eventb.core.predicate="∀v1,v2·v1∈voitures ∧ v2∈voitures ∧ v1∈dom(quelPortique) ∧ v2∈dom(quelPortique) ∧ v1≠v2 ⇒ quelPortique(v1) ≠ quelPortique(v2)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.variable name="inv7" org.eventb.core.identifier="quelEndroit"/>
 </org.eventb.core.machineFile>

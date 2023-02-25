@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeAvecBadge/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeAvecBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeAvecBadge/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeSansBadge/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeSansBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeBadgeSansBadge/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeTicket/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueEntreeTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteETicketAvecBadge/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteETicketAvecBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteETicketAvecBadge/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteETicketSansBadge/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteETicketSansBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteTicket/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerAutorouteTicket/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueSortieBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrerPortiqueSortieTicket/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteAvecTicket/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteAvecTicket/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteAvecTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteAvecTicket/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteSansTicket/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteSansTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortirAutorouteSansTicket/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageAvecBadge/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageAvecBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageAvecBadge/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageSansBadge/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageSansBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TélépéageSansBadge/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="péageTicket/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="péageTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteAvecBadge/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteAvecBadge/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteAvecBadge/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteFraude/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteFraude/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteAvecTicket/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrerAutorouteAvecTicket/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SortirAutorouteTélépéage/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SortirAutoroutePéage/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieAvecTicket/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieAvecTicket/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieAvecTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieAvecTicket/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieSansTicket/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieSansTicket/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortirPortiqueDeSortieSansTicket/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="perdreTicket/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="perdreTicket/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

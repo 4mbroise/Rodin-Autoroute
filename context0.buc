@@ -18,9 +18,6 @@
     <org.eventb.core.constant name="cst2" org.eventb.core.identifier="surAutoroute"/>
     <org.eventb.core.axiom name="axm1&gt;" org.eventb.core.label="axm15" org.eventb.core.predicate="partition(endroit, {pasSurAutoroute}, {portique}, {surAutoroute})"/>
     <org.eventb.core.carrierSet name="axm1?" org.eventb.core.identifier="voitures"/>
-    <org.eventb.core.axiom name="axm1@" org.eventb.core.label="axm16" org.eventb.core.predicate="c0 ∈ voitures → endroit"/>
-    <org.eventb.core.axiom name="axm18" org.eventb.core.label="axm17" org.eventb.core.predicate="∀x·x∈voitures⇒c0(x)=pasSurAutoroute"/>
-    <org.eventb.core.constant name="axm1A" org.eventb.core.identifier="c0"/>
     <org.eventb.core.carrierSet name="axm1B" org.eventb.core.identifier="portiques"/>
     <org.eventb.core.constant name="axm1D" org.eventb.core.identifier="p1"/>
     <org.eventb.core.constant name="cst6" org.eventb.core.identifier="p2"/>
